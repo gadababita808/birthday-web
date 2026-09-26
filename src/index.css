@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-body antialiased;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background-color: theme('colors.rose');
+    color: theme('colors.cream');
+  }
+
+  /* Elegant, understated scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(248, 215, 218, 0.3);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.rose');
+    border-radius: 999px;
+  }
+
+  /* Visible, gentle keyboard focus ring everywhere */
+  :focus-visible {
+    outline: 2px solid theme('colors.crimson');
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Respect reduced-motion preferences globally. Framer Motion components also
+   check this via the useReducedMotionPref hook, but this is a hard backstop
+   for any CSS keyframe animations (petals, glow, floating, etc). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
