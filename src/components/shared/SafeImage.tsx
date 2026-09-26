@@ -6,6 +6,10 @@ type SafeImageProps = {
   alt: string;
   className?: string;
   loading?: 'lazy' | 'eager';
+  /** 'cover' (default) crops to fill the box — good for grid thumbnails.
+   *  'contain' shrinks the photo to fit inside the box with no cropping —
+   *  use this anywhere the whole photo must stay visible, like a lightbox. */
+  fit?: 'cover' | 'contain';
 };
 
 /**
@@ -13,7 +17,7 @@ type SafeImageProps = {
  * added your real photos to public/images/memories/ yet), it swaps to a
  * soft, on-brand placeholder instead of showing a broken-image icon.
  */
-export function SafeImage({ src, alt, className, loading = 'lazy' }: SafeImageProps) {
+export function SafeImage({ src, alt, className, loading = 'lazy', fit = 'cover' }: SafeImageProps) {
   const [failed, setFailed] = useState(false);
 
   if (failed) {
@@ -42,7 +46,7 @@ export function SafeImage({ src, alt, className, loading = 'lazy' }: SafeImagePr
       alt={alt}
       loading={loading}
       onError={() => setFailed(true)}
-      className={cn('object-cover', className)}
+      className={cn(fit === 'contain' ? 'object-contain' : 'object-cover', className)}
     />
   );
 }

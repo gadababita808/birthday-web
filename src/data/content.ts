@@ -32,7 +32,7 @@ import image7 from '../assets/photos/image7.jpg';
 // This is intentionally a plain, hardcoded password because this
 // project only ever runs on your own computer (localhost). Change
 // it to whatever you like before you show her the site.
-export const PASSWORD = '123';
+export const PASSWORD = 'BBIU';
 
 // ---------------------------------------------------------------
 // NAMES
@@ -40,8 +40,8 @@ export const PASSWORD = '123';
 // Both set to 'Beta' as a placeholder for now — search this file for
 // "Beta" when you're ready and swap in the real names. Everything
 // below reads from these two constants, so you only edit it here.
-export const HER_NAME = 'Beta';
-export const MY_NAME = 'Beta';
+export const HER_NAME = 'Dolly';
+export const MY_NAME = 'Penguin';
 
 // ---------------------------------------------------------------
 // MUSIC
@@ -60,7 +60,7 @@ export const MUSIC = {
 export const hero = {
   eyebrow: `A little world for ${HER_NAME}`,
   title: 'Happy Birthday, My Love',
-  subtitle: 'Today is all about the most beautiful person in my world.',
+  subtitle: 'Today is all about youu, My cutie ',
   cta: 'Start Our Story',
 };
 
@@ -85,12 +85,15 @@ export const harryPotterLetter = {
   lockSubheading: 'Only one date will open it. Choose carefully.',
   unlockButton: 'Unlock the Letter',
   errorMessage: 'That date holds no magic here. Try again.',
-  heading: 'A Letter From Hogwarts',
+  heading: 'A Letter From your owl',
   intro: `My dearest ${HER_NAME},`,
-  body: `[HARRY POTTER LETTER CONTENT GOES HERE]
-
-Paste your real letter here — it can be as long or as short as you like,
-and the parchment will scroll gracefully either way.`,
+  body: `I LOVE YOUUUUUUUUUUU SOOOO MUCHHHHHHHH DOLLY 💕,
+  I guess Hogwarts meet me another you 
+  The day jab hum vaha gye .. i have never seen you like this muchhh crazy and happy ... 🤗 
+  Best best day ever baby boss
+  Just want to say 
+  No matter how much I say, it’s not enough—bahot pyareee ho yrr seriously 😭. I love you 💞... I’m truly out of words now; I’ve said it all.
+`,
   signature: `Always yours,\n${MY_NAME}`,
   photo: image5,
   photoCaption: 'A memory tucked inside, like a photograph in a locket.',
@@ -112,21 +115,21 @@ export type Memory = {
 export const memories: Memory[] = [
   {
     image: image1,
-    title: 'Our First Adventure',
-    date: '2024',
+    title: 'Our First Official Date 🫶🏻',
+    date: '21st May 2026',
     caption: 'One of my favorite days with you.',
   },
   {
     image: image2,
-    title: 'A Quiet Sunday',
-    date: '2024',
-    caption: 'Just us, and nowhere to be.',
+    title: 'My Candy ❤️',
+    date: '25th August 2026',
+    caption: 'What a day yrrr 🥹 honestly i hava never seen you like this thisss much happpyyyyy ... Love youuu so mucchhhh beta ❤️ ',
   },
   {
     image: image3,
-    title: 'The Trip We Almost Cancelled',
-    date: '2025',
-    caption: "Glad we didn't.",
+    title: ' we have so much fun here ....',
+    date: '9th sept 2026',
+    caption: "Best date !! simply the best ... Firse jayenge my baby boss ❤️",
   },
 ];
 
@@ -142,28 +145,28 @@ export type TimelineEntry = {
 export const timeline: TimelineEntry[] = [
   {
     title: 'How It All Started',
-    date: '[Date]',
-    description: 'A short line about how your paths first crossed.',
+    date: '14th March 2026',
+    description: 'how it started? 😝 all this started from a late night conversation that leads me to meet my beta... dont ever think that this goes to meet my baby boss.. love you cutie❤️ 🤪',
   },
   {
-    title: 'The First Date',
-    date: '[Date]',
-    description: 'Where you went, and one detail you still remember.',
+    title: 'The First Date 😝',
+    date: '21st May',
+    description: 'first date 😝 place achi lagi to date 🙈🫶🏻🫶🏻🫶🏻 [with a silence and a little bit fear]',
   },
   {
     title: 'Our Favorite Memory',
-    date: '[Date]',
-    description: 'The one you both bring up again and again.',
+    date: '29th April -- 1st May ',
+    description: 'favorite memories to bahot hai 🫣🥺 but the 2 days we spent with each other 29 - 30th april will be the favorite one 😌',
   },
   {
     title: 'Today',
-    date: '[Date]',
-    description: 'A little note about where you are now.',
+    date: '27th September 2026',
+    description: 'Today is my favorites birthday Happpyyyy Birthday Dolly , my panda , candy crush, chulbuli , baby boss , sweetie pie , cupcake & lots more ... Enjoy your day beta 🫶🏻 always with you 🫶🏻 🤗',
   },
   {
     title: 'Everything Still Ahead',
-    date: '',
-    description: 'A line about the future you\'re looking forward to.',
+    date: '♾️',
+    description: 'only want to say jaha kanha ji le gaye ... whatever written in destiny but always mine 😌🫶🏻',
   },
 ];
 
@@ -176,14 +179,14 @@ export const timeline: TimelineEntry[] = [
 export const thingsILoveSticker = image7;
 
 export const thingsILove: string[] = [
-  'Your smile',
-  'Your kindness',
-  'The way you laugh at your own jokes before you finish them',
-  'Your little habits',
-  'How you make ordinary days special',
-  'How you somehow make everything better',
-  'The way you say my name',
-  'How you always know what to say',
+  'Your smile that makes everything feel lighter',
+  'Simply… the way you’re you ❤️',
+  'How lucky I feel to have you in my life 🥰',
+  'The way you care more than you let people see',
+  'How you always manage to make me feel better',
+  'Your laugh — honestly, it’s contagious',
+  'Your hugs fix everything💕',
+  'You’re someone I never want to lose',
 ];
 
 // ---------------------------------------------------------------
@@ -197,11 +200,11 @@ export const finalSurprise = {
   // file, just change the import above.
   backgroundPhoto: image6,
   photo: image4,
-  photoCaption: 'Just like them, always wrapped up in each other.',
+  photoCaption: 'Humari trippp pending hai 😭😭 Like this night ... Sky...stars & You beside me ....  all I want thisss ..Koi nah yr Kab leke Jaa rahe ho fir 🤗 waiting......',
   // A fixed, hand-written date/time — not auto-generated — so it always
   // reads exactly as you set it, e.g. her birthday and the moment you're
   // sharing this with her.
-  dateTime: 'September 9, 2026 · 8:00 PM',
+  dateTime: ' · ',
   closingHeading: `Happy Birthday, ${HER_NAME}`,
   signature: `With all my love,\n${MY_NAME}`,
 };

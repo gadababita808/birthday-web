@@ -67,10 +67,18 @@ export function Lightbox({ memories, index, onClose, onNavigate }: LightboxProps
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.25 }}
-          className="max-h-[85vh] w-full max-w-3xl overflow-hidden rounded-2xl bg-cream shadow-2xl"
+          className="max-h-[85vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-cream shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
-          <SafeImage src={memory.image} alt={memory.title} className="h-[55vh] w-full sm:h-[65vh]" loading="eager" />
+          <div className="flex h-[50vh] w-full items-center justify-center rounded-t-2xl bg-ink sm:h-[60vh]">
+            <SafeImage
+              src={memory.image}
+              alt={memory.title}
+              fit="contain"
+              className="h-full w-full"
+              loading="eager"
+            />
+          </div>
           <div className="p-5 text-center">
             <p className="font-display text-2xl italic text-wine">{memory.title}</p>
             <p className="mt-1 text-sm text-ink/60">{memory.date}</p>
