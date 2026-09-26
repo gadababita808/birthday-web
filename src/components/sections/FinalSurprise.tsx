@@ -7,16 +7,19 @@ export function FinalSurprise() {
   const [revealed, setRevealed] = useState(false);
 
   return (
-    <section className="relative overflow-hidden bg-ink px-6 py-28 text-center text-cream sm:py-36">
-      {/* Full-bleed photo, kept at low opacity so it reads as atmosphere,
-          not as competition with the text on top of it. */}
+    <section
+      id="surprise"
+      className="relative overflow-hidden bg-ink px-6 py-28 text-center text-cream sm:py-36"
+    >
+      {/* Full-bleed background photo. Kept clearly visible, with a dark
+          brown gradient over it so the text on top stays easy to read. */}
       <div className="absolute inset-0" aria-hidden="true">
         <SafeImage
-          src={finalSurprise.photo}
+          src={finalSurprise.backgroundPhoto}
           alt=""
-          className="h-full w-full opacity-15 [mask-image:radial-gradient(ellipse_at_center,black_45%,transparent_85%)]"
+          className="h-full w-full object-cover opacity-45"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/85 to-ink" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/75 to-ink" />
       </div>
 
       <div className="pointer-events-none absolute left-1/2 top-16 h-56 w-56 -translate-x-1/2 rounded-full bg-champagne/20 blur-3xl" />
@@ -52,14 +55,7 @@ export function FinalSurprise() {
               </p>
 
               <div className="mt-10 flex flex-col items-center">
-                <div className="h-40 w-40 overflow-hidden rounded-full border-2 border-champagne/40 shadow-[0_0_30px_rgba(241,227,198,0.25)] sm:h-48 sm:w-48">
-                  <SafeImage
-                    src={finalSurprise.photo}
-                    alt="A panda and a penguin hugging"
-                    className="h-full w-full"
-                  />
-                </div>
-                <p className="mt-4 max-w-xs text-balance text-sm italic text-cream/70">
+                <p className="max-w-xs text-balance text-sm italic text-cream/70">
                   {finalSurprise.photoCaption}
                 </p>
                 <p className="mt-2 text-xs uppercase tracking-[0.2em] text-champagne/80">

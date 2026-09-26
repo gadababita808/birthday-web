@@ -21,6 +21,10 @@ import image2 from '../assets/photos/image2.jpg';
 import image3 from '../assets/photos/image3.jpg';
 import image4 from '../assets/photos/image4.jpg';
 import image5 from '../assets/photos/image5.jpg';
+// image6 → background photo behind the final "Surprise" section
+// image7 → the sticker shown in the bottom-right of "A Few Things I Love About You"
+import image6 from '../assets/photos/image6.jpg';
+import image7 from '../assets/photos/image7.jpg';
 
 // ---------------------------------------------------------------
 // PASSWORD
@@ -166,6 +170,11 @@ export const timeline: TimelineEntry[] = [
 // ---------------------------------------------------------------
 // THINGS I LOVE ABOUT YOU
 // ---------------------------------------------------------------
+// The little sticker image shown in the bottom-right corner of this
+// section. Put your image at src/assets/photos/image7.jpg — if you'd
+// rather use a different file, just change the import above.
+export const thingsILoveSticker = image7;
+
 export const thingsILove: string[] = [
   'Your smile',
   'Your kindness',
@@ -178,21 +187,15 @@ export const thingsILove: string[] = [
 ];
 
 // ---------------------------------------------------------------
-// BIRTHDAY SURPRISE (cake / candles / wish)
-// ---------------------------------------------------------------
-export const birthdaySurprise = {
-  heading: 'Make A Wish',
-  prompt: 'Blow out the candles and make a wish 🎂',
-  buttonLabel: 'Make a Wish',
-  revealMessage: 'One more year of you being wonderfully you.',
-};
-
-// ---------------------------------------------------------------
 // FINAL SURPRISE
 // ---------------------------------------------------------------
 export const finalSurprise = {
   heading: 'And if I could give you one thing...',
   reveal: "I'd give you a thousand more moments together.",
+  // The big photo behind the whole section. Put your image at
+  // src/assets/photos/image6.jpg — if you'd rather use a different
+  // file, just change the import above.
+  backgroundPhoto: image6,
   photo: image4,
   photoCaption: 'Just like them, always wrapped up in each other.',
   // A fixed, hand-written date/time — not auto-generated — so it always

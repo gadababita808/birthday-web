@@ -4,9 +4,11 @@ import { memories } from '../../data/content';
 import { SectionHeading } from '../shared/SectionHeading';
 import { SafeImage } from '../shared/SafeImage';
 import { Lightbox } from './Lightbox';
+import { useReducedMotionPref } from '../../hooks/useReducedMotionPref';
 
 export function Memories() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const reducedMotion = useReducedMotionPref();
 
   return (
     <section id="memories" className="relative bg-blush/30 px-6 py-24 sm:py-32">
@@ -28,11 +30,25 @@ export function Memories() {
               transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
               className="group relative aspect-[4/5] overflow-hidden rounded-2xl border border-rose/30 bg-white shadow-sm transition-shadow hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-crimson"
             >
-              <SafeImage
-                src={memory.image}
-                alt={memory.title}
-                className="h-full w-full transition-transform duration-500 group-hover:scale-105"
-              />
+              {/* Slow, continuous "Ken Burns" zoom — each photo drifts in and
+                  back out on its own gentle cycle so the grid feels alive
+                  rather than static. Disabled for anyone with reduced-motion
+                  set. The hover zoom below still layers on top of it. */}
+              <motion.div
+                className="h-full w-full"
+                animate={reducedMotion ? undefined : { scale: [1, 1.12, 1] }}
+                transition={{
+                  duration: 10 + i * 1.5,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+              >
+                <SafeImage
+                  src={memory.image}
+                  alt={memory.title}
+                  className="h-full w-full transition-transform duration-500 group-hover:scale-105"
+                />
+              </motion.div>
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/70 to-transparent p-3 text-left opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <p className="font-display text-sm italic text-cream">{memory.title}</p>
                 <p className="text-xs text-cream/80">{memory.date}</p>
