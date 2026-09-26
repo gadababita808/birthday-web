@@ -13,6 +13,15 @@ export default {
         'rose-gold': '#D9A5A0',
         champagne: '#F1E3C6',
         sage: '#9CAE8C',
+        // Harry Potter letter theme (Hogwarts gold & maroon)
+        'hogwarts-maroon': '#5E0000',
+        'hogwarts-maroon-dark': '#3D0000',
+        'hogwarts-gold': '#D3A625',
+        'hogwarts-gold-light': '#EAD196',
+        parchment: '#F1E3C0',
+        'parchment-dark': '#E3D0A0',
+        'wax-red': '#7A0C0C',
+        'letter-ink': '#3B2A1A',
       },
       fontFamily: {
         display: ['"Cormorant Garamond"', 'Georgia', 'serif'],

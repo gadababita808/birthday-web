@@ -7,6 +7,22 @@
  */
 
 // ---------------------------------------------------------------
+// PHOTOS (imported as real modules — Vite bundles these properly)
+// ---------------------------------------------------------------
+// Every real photo used anywhere on the site lives in
+// src/assets/photos/ and is named image1.jpg, image2.jpg, etc.
+// Right now these are soft placeholder images so the site runs
+// perfectly as-is. To use your real photos: just replace each file
+// in src/assets/photos/ with your own picture, keeping the exact
+// same filename (image1.jpg, image2.jpg, ...). Nothing else needs
+// to change.
+import image1 from '../assets/photos/image1.jpg';
+import image2 from '../assets/photos/image2.jpg';
+import image3 from '../assets/photos/image3.jpg';
+import image4 from '../assets/photos/image4.jpg';
+import image5 from '../assets/photos/image5.jpg';
+
+// ---------------------------------------------------------------
 // PASSWORD
 // ---------------------------------------------------------------
 // This is intentionally a plain, hardcoded password because this
@@ -17,8 +33,11 @@ export const PASSWORD = '123';
 // ---------------------------------------------------------------
 // NAMES
 // ---------------------------------------------------------------
-export const HER_NAME = '[Her Name]';
-export const MY_NAME = '[Your Name]';
+// Both set to 'Beta' as a placeholder for now — search this file for
+// "Beta" when you're ready and swap in the real names. Everything
+// below reads from these two constants, so you only edit it here.
+export const HER_NAME = 'Beta';
+export const MY_NAME = 'Beta';
 
 // ---------------------------------------------------------------
 // MUSIC
@@ -42,23 +61,41 @@ export const hero = {
 };
 
 // ---------------------------------------------------------------
-// LOVE LETTER
+// HARRY POTTER LETTER
 // ---------------------------------------------------------------
-export const loveLetter = {
-  heading: 'A Little Letter For You',
-  intro: `My dearest ${HER_NAME},`,
-  body: `[LOVE LETTER GOES HERE]
+// The letter arrives sealed. She has to pick the correct Day / Month /
+// Year from three dropdowns to break the seal — get all three right
+// and the parchment opens. Change UNLOCK_DATE to whatever date you
+// want it to be (it must match exactly).
+export const UNLOCK_DATE = {
+  day: 25,
+  month: 'August',
+  year: 2026,
+};
 
-Write whatever you want her to read the moment she opens this. It can be
-as long or as short as you like — this whole panel will scroll gracefully
-either way.`,
+export const harryPotterLetter = {
+  envelopeLabel: `To ${HER_NAME}`,
+  envelopeSubLabel: 'Delivered by Owl Post',
+  sealPrompt: 'Break the seal to open your letter',
+  lockHeading: 'This letter is sealed with old magic.',
+  lockSubheading: 'Only one date will open it. Choose carefully.',
+  unlockButton: 'Unlock the Letter',
+  errorMessage: 'That date holds no magic here. Try again.',
+  heading: 'A Letter From Hogwarts',
+  intro: `My dearest ${HER_NAME},`,
+  body: `[HARRY POTTER LETTER CONTENT GOES HERE]
+
+Paste your real letter here — it can be as long or as short as you like,
+and the parchment will scroll gracefully either way.`,
   signature: `Always yours,\n${MY_NAME}`,
+  photo: image5,
+  photoCaption: 'A memory tucked inside, like a photograph in a locket.',
 };
 
 // ---------------------------------------------------------------
 // MEMORIES / PHOTO GALLERY
 // ---------------------------------------------------------------
-// Put your photos in public/images/memories/ and reference them here.
+// Photos come from src/assets/photos/ (image1.jpg, image2.jpg, image3.jpg).
 // If a file is missing or broken, a soft placeholder appears instead —
 // the gallery never looks broken.
 export type Memory = {
@@ -70,28 +107,22 @@ export type Memory = {
 
 export const memories: Memory[] = [
   {
-    image: '/images/memories/memory-01.jpg',
+    image: image1,
     title: 'Our First Adventure',
     date: '2024',
     caption: 'One of my favorite days with you.',
   },
   {
-    image: '/images/memories/memory-02.jpg',
+    image: image2,
     title: 'A Quiet Sunday',
     date: '2024',
     caption: 'Just us, and nowhere to be.',
   },
   {
-    image: '/images/memories/memory-03.jpg',
+    image: image3,
     title: 'The Trip We Almost Cancelled',
     date: '2025',
     caption: "Glad we didn't.",
-  },
-  {
-    image: '/images/memories/memory-04.jpg',
-    title: 'That Silly Photo',
-    date: '2025',
-    caption: 'You hate this one. I love it.',
   },
 ];
 
@@ -109,11 +140,6 @@ export const timeline: TimelineEntry[] = [
     title: 'How It All Started',
     date: '[Date]',
     description: 'A short line about how your paths first crossed.',
-  },
-  {
-    title: 'The First Conversation',
-    date: '[Date]',
-    description: 'What you talked about, or how it felt.',
   },
   {
     title: 'The First Date',
@@ -167,7 +193,7 @@ export const birthdaySurprise = {
 export const finalSurprise = {
   heading: 'And if I could give you one thing...',
   reveal: "I'd give you a thousand more moments together.",
-  photo: '/images/decorations/panda-penguin.jpg',
+  photo: image4,
   photoCaption: 'Just like them, always wrapped up in each other.',
   // A fixed, hand-written date/time — not auto-generated — so it always
   // reads exactly as you set it, e.g. her birthday and the moment you're
