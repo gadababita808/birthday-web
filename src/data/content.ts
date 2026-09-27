@@ -161,7 +161,7 @@ export const timeline: TimelineEntry[] = [
   {
     title: 'Today',
     date: '27th September 2026',
-    description: 'Today is my favorites birthday Happpyyyy Birthday Dolly , my panda , candy crush, chulbuli , baby boss , sweetie pie , cupcake & lots more ... Enjoy your day beta 🫶🏻 always with you 🫶🏻 🤗',
+    description: 'Today is my favorites birthday Happpyyyy Birthday bhonduu , my panda , candy crush, chulbuli , baby boss , sweetie pie , cupcake & lots more ... Enjoy your day beta 🫶🏻 always with you 🫶🏻 🤗',
   },
   {
     title: 'Everything Still Ahead',
