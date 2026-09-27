@@ -40,7 +40,7 @@ export const PASSWORD = 'BBIU';
 // Both set to 'Beta' as a placeholder for now — search this file for
 // "Beta" when you're ready and swap in the real names. Everything
 // below reads from these two constants, so you only edit it here.
-export const HER_NAME = 'Dolly';
+export const HER_NAME = 'BHONDUU ❤️';
 export const MY_NAME = 'Penguin';
 
 // ---------------------------------------------------------------
